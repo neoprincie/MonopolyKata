@@ -10,9 +10,14 @@ namespace MonopolyKata.Core
     {
         private Dictionary<string, int> PlayerLocations;
 
-        public Mover()
+        public Mover(List<string> players)
         {
             PlayerLocations = new Dictionary<string,int>();
+
+            foreach (var player in players)
+            {
+                PlayerLocations.Add(player, 0);
+            }
         }
 
         public void Move(string playerName, int spacesToMove)
@@ -29,9 +34,6 @@ namespace MonopolyKata.Core
        
         public void SetPlayerLocation(string playerName, int location)
         {
-            if(!PlayerLocations.ContainsKey(playerName))
-                PlayerLocations.Add(playerName, location);
-
             PlayerLocations[playerName] = location;
         }
     }

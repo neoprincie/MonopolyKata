@@ -22,7 +22,7 @@ namespace MonopolyKata.Tests
         [Test]
         public void Move_ShouldIncreaseThePlayerLocationByTheSpecifiedAmount()
         {
-            var mover = new Mover();
+            var mover = new Mover(new List<string> {"Prinsy"} );
             mover.SetPlayerLocation("Prinsy", 0);
 
             mover.Move("Prinsy", 7);
