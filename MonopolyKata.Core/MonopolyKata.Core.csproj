@@ -40,9 +40,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ClassicMonopolyBuilder.cs" />
+    <Compile Include="Exceptions\TooFewPlayersException.cs" />
     <Compile Include="Game.cs" />
+    <Compile Include="IGame.cs" />
     <Compile Include="IMonopolyBuilder.cs" />
-    <Compile Include="InvalidPlayerException.cs" />
+    <Compile Include="Exceptions\InvalidPlayerException.cs" />
     <Compile Include="Mover.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

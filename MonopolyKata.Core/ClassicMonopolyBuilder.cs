@@ -8,14 +8,19 @@ namespace MonopolyKata.Core
 {
     public class ClassicMonopolyBuilder : IMonopolyBuilder
     {
-        Game game = new Game();
+        IGame game;
+
+        public ClassicMonopolyBuilder()
+        {
+            game = new Game();
+        }
 
         public void SetPlayers(List<string> players)
         {
             game.Players = players;
         }
 
-        public Game GetGame()
+        public IGame GetGame()
         {
             return game;
         }

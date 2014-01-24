@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace MonopolyKata.Core
+namespace MonopolyKata.Core.Exceptions
 {
     public class InvalidPlayerException : Exception
     {

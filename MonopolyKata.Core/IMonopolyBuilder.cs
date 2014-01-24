@@ -8,5 +8,6 @@ namespace MonopolyKata.Core
     public interface IMonopolyBuilder
     {
         void SetPlayers(List<string> players);
+        IGame GetGame();
     }
 }
