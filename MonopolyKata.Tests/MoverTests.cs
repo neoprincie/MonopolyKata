@@ -12,9 +12,9 @@ namespace MonopolyKata.Tests
     public class MoverTests
     {
         [Test]
-        public void CanCreate()
+        public void Ctor_ShouldAcceptAListOfPlayers()
         {
-            var mover = new Mover();
+            var mover = new Mover(new List<string>());
 
             Assert.That(mover, Is.Not.Null);
         }
@@ -30,8 +30,8 @@ namespace MonopolyKata.Tests
             Assert.That(mover.GetPlayerLocation("Prinsy"), Is.EqualTo(7));
         }
 
-        //TODO: Test for GetPlayerLocation
 
+        //TODO: Test for GetPlayerLocation
         //TODO: Test for SetPlayerLocation
 
         //TODO: How do players ger into the mover?
