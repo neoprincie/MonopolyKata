@@ -5,7 +5,7 @@ using System.Text;
 
 namespace MonopolyKata.Core
 {
-    public interface IGameBuilder
+    public interface IMonopolyBuilder
     {
     }
 }

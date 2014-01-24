@@ -5,18 +5,18 @@ using System.Collections.Generic;
 namespace MonopolyKata.Tests
 {
     [TestFixture]
-    public class GameCreatorTests
+    public class ClassicMonopolyBuilderTests
     {
         [Test]
         public void CanCreate()
         {
-            var gameBuilder = new GameBuilder();
+            var gameBuilder = new ClassicMonopolyBuilder();
         }
 
         [Test]
         public void SetPlayers_ShouldAddPlayers()
         {
-            var gameBuilder = new GameBuilder();
+            var gameBuilder = new ClassicMonopolyBuilder();
             var players = new List<string>() { "Horse", "Car"};
 
             gameBuilder.SetPlayers(players);

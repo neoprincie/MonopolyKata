@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace MonopolyKata.Core
 {
-    public class GameBuilder : IGameBuilder
+    public class ClassicMonopolyBuilder : IMonopolyBuilder
     {
-        public GameBuilder()
+        public ClassicMonopolyBuilder()
         {
 
         }
