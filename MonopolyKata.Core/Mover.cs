@@ -26,8 +26,19 @@ namespace MonopolyKata.Core
                 throw new InvalidPlayerException(playerName + "does not exist. This makes me sad :(");
 
             var currentLocation = PlayerLocations[playerName];
+            var newLocation = CalculateNewLocation(currentLocation, spacesToMove);
 
-            SetPlayerLocation(playerName, currentLocation + spacesToMove);
+            SetPlayerLocation(playerName, newLocation);
+        }
+
+        private int CalculateNewLocation(int currentLocation, int spacesToMove)
+        {
+            var locationCandidate = currentLocation + spacesToMove;
+            var numberOfBoardLocations = 40;
+
+            return (locationCandidate >= numberOfBoardLocations)
+                       ? locationCandidate % numberOfBoardLocations
+                       : locationCandidate;
         }
 
         public int GetPlayerLocation(string playerName)
