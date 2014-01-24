@@ -45,7 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GameCreatorTests.cs" />
+    <Compile Include="ClassicMonopolyBuilderTests.cs" />
     <Compile Include="MoverTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

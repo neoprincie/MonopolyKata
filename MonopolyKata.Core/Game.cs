@@ -2,11 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace MonopolyKata.Core
 {
-    public interface IMonopolyBuilder
+    public class Game
     {
-        void SetPlayers(List<string> players);
+        public List<string> Players { get; set; }
     }
 }
