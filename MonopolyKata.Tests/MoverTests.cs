@@ -15,12 +15,12 @@ namespace MonopolyKata.Tests
         [Test]
         public void Move_ShouldIncreaseThePlayerLocationByTheSpecifiedAmount()
         {
-            var mover = new Mover(new List<string> {"Prinsy"} );
-            mover.SetPlayerLocation("Prinsy", 0);
+            var mover = new Mover(new List<string> { "Princie" });
+            mover.SetPlayerLocation("Princie", 0);
 
-            mover.Move("Prinsy", 7);
+            mover.Move("Princie", 7);
 
-            Assert.That(mover.GetPlayerLocation("Prinsy"), Is.EqualTo(7));
+            Assert.That(mover.GetPlayerLocation("Princie"), Is.EqualTo(7));
         }
 
         [Test]
@@ -28,7 +28,17 @@ namespace MonopolyKata.Tests
         {
             var mover = new Mover(new List<string>());
 
-            Assert.Throws<InvalidPlayerException>(() => mover.Move("Prinsy", 7));
+            Assert.Throws<InvalidPlayerException>(() => mover.Move("Princie", 7));
+        }
+
+        [Test]
+        public void Move_ShouldWrapPlayerWhenEndOfBoardIsReached()
+        {
+            var mover = new Mover(new List<string>());
+            mover.SetPlayerLocation("Princie", 39);
+
+            mover.Move("Princie", 6);
+            Assert.That(mover.GetPlayerLocation("Princie"), Is.EqualTo(5));
         }
     }
 }
