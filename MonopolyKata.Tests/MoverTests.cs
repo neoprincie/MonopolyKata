@@ -23,11 +23,19 @@ namespace MonopolyKata.Tests
         public void Move_ShouldIncreaseThePlayerLocationByTheSpecifiedAmount()
         {
             var mover = new Mover();
-            mover.SetPlayerLocation("Prinsy", "Xero");
+            mover.SetPlayerLocation("Prinsy", 0);
 
             mover.Move("Prinsy", 7);
 
-            Assert.That(mover.GetPlayerLocation("Prinsy", Is.EqualTo("Seven)")));
+            Assert.That(mover.GetPlayerLocation("Prinsy"), Is.EqualTo(7));
         }
+
+        //TODO: Test for GetPlayerLocation
+
+        //TODO: Test for SetPlayerLocation
+
+        //TODO: How do players ger into the mover?
+
+        //TODO: What if the players do not exist in the mover? Should they just be added with a default position?
     }
 }
