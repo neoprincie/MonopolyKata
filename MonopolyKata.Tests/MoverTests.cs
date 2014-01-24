@@ -11,13 +11,6 @@ namespace MonopolyKata.Tests
     [TestFixture]
     public class MoverTests
     {
-        [Test]
-        public void Ctor_ShouldAcceptAListOfPlayers()
-        {
-            var mover = new Mover(new List<string>());
-
-            Assert.That(mover, Is.Not.Null);
-        }
 
         [Test]
         public void Move_ShouldIncreaseThePlayerLocationByTheSpecifiedAmount()
@@ -30,12 +23,12 @@ namespace MonopolyKata.Tests
             Assert.That(mover.GetPlayerLocation("Prinsy"), Is.EqualTo(7));
         }
 
+        [Test]
+        public void Move_WhenGivenANonexistingPlayer_ShouldThrowAnInvalidPlayerException()
+        {
+            var mover = new Mover(new List<string>());
 
-        //TODO: Test for GetPlayerLocation
-        //TODO: Test for SetPlayerLocation
-
-        //TODO: How do players ger into the mover?
-
-        //TODO: What if the players do not exist in the mover? Should they just be added with a default position?
+            Assert.Throws<InvalidPlayerException>(() => mover.Move("Prinsy", 7));
+        }
     }
 }
