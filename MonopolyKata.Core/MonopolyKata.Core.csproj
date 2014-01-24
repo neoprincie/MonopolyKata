@@ -39,6 +39,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GameBuilder.cs" />
+    <Compile Include="IGameBuilder.cs" />
     <Compile Include="InvalidPlayerException.cs" />
     <Compile Include="Mover.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
