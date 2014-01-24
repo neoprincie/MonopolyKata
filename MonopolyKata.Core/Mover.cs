@@ -22,6 +22,9 @@ namespace MonopolyKata.Core
 
         public void Move(string playerName, int spacesToMove)
         {
+            if (!PlayerLocations.ContainsKey(playerName))
+                throw new InvalidPlayerException(playerName + "does not exist. This makes me sad :(");
+
             var currentLocation = PlayerLocations[playerName];
 
             SetPlayerLocation(playerName, currentLocation + spacesToMove);
